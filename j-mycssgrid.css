@@ -1,0 +1,9 @@
+#background-image{
+ position:absolute; /*配合z-index使背景图片显示在网页内容下方*/
+ top:0;
+ left:0;
+ z-index:-10;
+ overflow: hidden;
+ width: 100%;
+ display:none; /*未开启JavaScript的浏览器将不会显示背景图片*/
+ }

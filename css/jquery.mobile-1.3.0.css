@@ -1101,7 +1101,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 /*fouc*/
 .ui-mobile-rendering > * { visibility: hidden; }
 /*headers, content panels*/
-.ui-bar, .ui-body { position: relative; padding: .4em 15px; overflow: hidden; display: block; clear:both; }
+.ui-bar, .ui-body { position: relative; padding: 0px; overflow: hidden; display: block; clear:both; }
 .ui-bar { font-size: 16px; margin: 0; }
 .ui-bar h1, .ui-bar h2, .ui-bar h3, .ui-bar h4, .ui-bar h5, .ui-bar h6 { margin: 0; padding: 0; font-size: 16px; display: inline-block; }
 .ui-header, .ui-footer { position: relative; zoom: 1; }
@@ -1923,15 +1923,15 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-grid-a .ui-block-a { clear: left; }
 /* grid b: 33/33/33 */
 .ui-grid-b .ui-block-a, .ui-grid-b .ui-block-b, .ui-grid-b .ui-block-c { width: 33.25%; }
-.ui-grid-b > :nth-child(n) { width: 33.333%; margin-right: -.5px; }
+.ui-grid-b > :nth-child(n) { width: 33.333%; margin-right: -.5px; margin-bottom: -4.5px }
 .ui-grid-b .ui-block-a { clear: left; }
 /* grid c: 25/25/25/25 */
 .ui-grid-c .ui-block-a, .ui-grid-c .ui-block-b, .ui-grid-c .ui-block-c, .ui-grid-c .ui-block-d { width: 24.925%; }
-.ui-grid-c > :nth-child(n) { width: 25%; margin-right: -.5px; }
+.ui-grid-c > :nth-child(n) { width: 25%; margin-right: -.5px; margin-bottom: -4.5px}
 .ui-grid-c .ui-block-a { clear: left; }
 /* grid d: 20/20/20/20/20 */
 .ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 19.925%; }
-.ui-grid-d > :nth-child(n) { width: 20%; }
+.ui-grid-d > :nth-child(n) { width: 20%; margin-bottom: -4.5px}
 .ui-grid-d .ui-block-a { clear: left; }
 /* preset breakpoint to switch to stacked grid styles below 35em (560px) */
 @media all and (max-width: 35em) {

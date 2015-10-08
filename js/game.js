@@ -40,7 +40,7 @@ var game = function() {
         });
         var timeoutFn = function() {
             time++;
-            $("#time").html('<span class="ui-btn-inner"><span class="ui-btn-text">Time spent : ' + time + ' seconds</span></span>');
+            $("#time").html('<span class="ui-btn-inner"><span class="ui-btn-text">计时 : ' + time + ' 秒</span></span>');
         }
         timeoutFn();
         timout = setInterval(timeoutFn, 1000);

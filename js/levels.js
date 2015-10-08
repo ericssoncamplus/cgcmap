@@ -1,4 +1,4 @@
-var level = [
+var level = [ 
     {
         data: [
             [0, 1, 0],

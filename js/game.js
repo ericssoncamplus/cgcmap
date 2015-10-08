@@ -7,16 +7,16 @@ var game = function() {
         var leters = ['a', 'b', 'c', 'd', 'e'];
         var totrow = data.length;
         var totcol = data[0].length;
-        var html = '<div class="ui-grid-' + leters[totcol - 2] + '">';
+        var html = '<div class="ui-grid-' + leters[totcol - 2] + ' ui-grid-height-' + leters[totcol - 2] + '">';
         clearInterval(timout);
         $.each(data, function(i) {
             var self = this;
             $.each(self, function(j) {
                 html += '<div class="ui-block-' + leters[j % 5 ] + ' light">';
                 if (data[i][j] === 1) {
-                    html += '<div class="ui-bar ui-bar-c"><img src="css/images/home.png"/></div>';
+                    html += '<div class="ui-bar ui-bar-c"><img width="100%" height="100%"  src="css/images/ECON_white2.png"/></div>';
                 } else {
-                    html += '<div class="ui-bar ui-bar-e"><img src="css/images/home.png"/></div>';
+                    html += '<div class="ui-bar ui-bar-b"><img width="100%" height="100%" src="css/images/ECON_white2.png"/></div>';
                 }
                 html += '</div>';
             });
@@ -53,7 +53,7 @@ var game = function() {
         function toggle(index) {
             if (index < 0 || index >= totrow * totcol)
                 return;
-            $($("#grid div.light")[index]).children().toggleClass("ui-bar-e").toggleClass("ui-bar-c");
+            $($("#grid div.light")[index]).children().toggleClass("ui-bar-b").toggleClass("ui-bar-c");
         }
         function isFinish() {
             for (var i = 0; i < totrow * totcol; i++) {

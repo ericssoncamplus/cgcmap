@@ -46,6 +46,7 @@ function renderLevelSelect(dif) {
 }
 
 function finishedGame(totalMoves, time) {
+	$("#currentLevel").html(currentLevel + 1);
     $("#score").html(totalMoves);
     $("#timeEl").html(time);
     $.mobile.changePage("#success", {transition: "slideup"});

@@ -64,7 +64,6 @@ var game = function() {
         }
     }
 
-
     return {
         init: init
     }

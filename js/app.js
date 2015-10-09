@@ -6,7 +6,7 @@ $(document).on("pagebeforechange", function(e, data) {
     var page = data.toPage.toString().split("#");
     var toPagePrefix = page[0];
     var toPage = page[1];
-
+ 
     switch (toPage) {
         case "game":
         case "retry":

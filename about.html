@@ -45,7 +45,7 @@
     <body style="text-align: center;">
                              
         <!-- About -->
-        <div data-role="page" id="about">
+        <div data-role="page" id="about" data-position="fixed">
             <div data-theme="a" data-role="header">
                 <h3>
                     爱立信
@@ -86,9 +86,11 @@
                     </a>
                 </div>                              	 
             </div> 
-            <div data-role="footer" data-theme="a">
+            <div data-role="footer" data-theme="a" data-position="fixed">
             	<div data-role="navbar">
-                	<a href="index.html#home">返回</a>
+                	<ul>
+                    	<li><a href="index.html#home" data-ajax="false">返回</a></li>
+                	</ul>
                 </div>
             </div>
         </div>              

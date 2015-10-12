@@ -13,49 +13,31 @@
         <script src="js/jquery.mobile.js" type="text/javascript"></script>
         <script src="js/game.js" type="text/javascript"></script>
         <script src="js/levels.js" type="text/javascript"></script>
-        <script src="js/app.js" type="text/javascript"></script>
-        
-         <script type="text/javascript">
-			$(document).ready(function() {
-				$top_height = $("div[data-role=header]").height();
-				$bottom_height = $("div[data-role=footer]").height();
-				$body_height = $(window).height() - $top_height - $bottom_height;
-				
-				$pic_height = $body_height / 2;
-				$pic_height = $pic_height + "px";
-				$("div[data-role=main_pic]").width("100%").height($pic_height);
-				
-				$body_height = $body_height / 2 - 15;
-				$body_height = $body_height + "px";
-				$("div[data-role=metro_body]").width("70%").height($body_height);				
-			});
-		 </script>
-         <style type="text/css">
-         	.metro_rec { margin:0 auto; }
-         </style>
-        
+        <script src="js/app.js" type="text/javascript"></script>       
+       
     </head>
     <body style="text-align: center;">
-    <!--<body>-->
     
         <!-- Home -->
-        <div data-role="page" id="home">
-            <div data-theme="a" data-role="header">
-                <h3>
-                    点亮爱立信图标
-                </h3>
-            </div>
-            <div data-role="main_pic">            		
-                <img src="css/images/Ericsson.jpg" width="100%" height="100%"> 
-            </div>                                    
-            <div data-role="metro_body" class="metro_rec" data-theme="e">   
-            	<br/><br/>        	
-                <a href="#game" data-transition="fade" data-theme="b" data-role="button">开始游戏</a>
-                <a href="help.html" data-role="button" data-ajax="false">游戏说明</a>
-                <a href="about.html" data-role="button" data-ajax="false">关于爱立信</a>         
-            </div>                              
+        <div data-role="page" id="home" style="background-image:url(css/images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-color:#fff;">            
+            <div data-role="content">  
+            	<br/><br/>
+                <div style="margin: 30px 0px;">
+                	<a href="#game" style="border:1px solid #fff;color: #fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-decoration:none; border-radius:10px; text-shadow:none;">点亮爱立信</a> 
+                </div>
+            	<br/>
+                <div>
+                	<span style="color: #fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-shadow:none;">游戏说明</span>
+                	<span style="color: #fff;font-size: 12px;text-align:center; width: 100%; display:block; padding:2px 0px; font-weight:normal; text-shadow:none;">每一次点击爱立信图标，其相邻的图标都会变换颜色</span>
+                	<span style="color: #fff;font-size: 12px;text-align:center; width: 100%; display:block; padding:2px 0px; font-weight:normal; text-shadow:none;">用最短的时间和步骤点亮所有的爱立信图标</span>
+                </div>
+                <br/><br/><br/><br/>       	
+                <div style="margin-left:30px; margin-right:30px;">
+               		<a href="about.html" style="border:1px solid #fff;color: #fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-decoration:none; border-radius:3px; text-shadow:none;" data-ajax="false">爱立信校园招聘</a>
+                </div>  
+            </div>                          
         </div>
-        
+            
         <!-- Game -->
         <div data-role="page" id="game">
             <div data-theme="a" data-role="header">
@@ -73,49 +55,65 @@
             <div data-role="tabbar" data-iconpos="top" data-theme="a" data-cid="tabbar3" class="codiqa-control ui-footer ui-footer-fixed ui-bar-a ui-navbar ui-mini" role="navigation">
                 <ul class="ui-grid-b">
                     <li class="ui-block-a"><a href="#pre" data-transition="fade" data-theme="a" data-icon="arrow-l" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">上一关</span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
-                    <li class="ui-block-b"><a href="#home" data-transition="fade" data-theme="a" data-icon="home" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">首页</span><span class="ui-icon ui-icon-home ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
-                    <!--<li class="ui-block-c"><a href="#next" data-transition="fade" data-theme="a" data-icon="arrow-r" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">下一关</span><span class="ui-icon ui-icon-arrow-r ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>-->
-                    <li class="ui-block-c"><a href="about.html" data-transition="fade" data-theme="a" data-icon="grid" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true" data-ajax="false"><span class="ui-btn-inner"><span class="ui-btn-text">关于爱立信</span><span class="ui-icon ui-icon-grid ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
+                    <li class="ui-block-b"><a href="#home" data-transition="fade" data-theme="a" data-icon="home" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">首页</span><span class="ui-icon ui-icon-home ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>                    <li class="ui-block-c"><a href="about.html" data-transition="fade" data-theme="a" data-icon="grid" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true" data-ajax="false"><span class="ui-btn-inner"><span class="ui-btn-text">爱立信招聘</span><span class="ui-icon ui-icon-grid ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
                 </ul>
             </div>
         </div>
         
         <!-- Success -->
-        <div data-role="page" id="success">
+        <div data-role="page" id="success" style="background-image:url(css/images/background2.jpg); background-size:100% 100%; background-repeat:no-repeat; background-color:#fff;">
             <div data-theme="a" data-role="header">
                 <h3>
                     点亮爱立信图标
                 </h3>
             </div>
             <div data-role="content">
-                <h1>恭喜你!!</h1>
-                <!--<h3>你一共走了<span id="score"></span> moves to complete in <span id="timeEl"></span> seconds.</h3>-->
+                <!--<h1>恭喜你!!</h1>               
                 <h3>第<span id="currentLevel"></span>关</h3>
-                <h3>你在<span id="timeEl"></span>秒内，一共走了<span id="score"></span>步</h3>
-                <br/>
-                <div data-role="controlgroup">
-                    <a href="#retry" data-transition="fade" data-theme="b" data-role="button">重新开始这关</a>
+                <h3>你在<span id="timeEl"></span>秒内，一共走了<span id="score"></span>步</h3>-->
+                <div>
+                	<span style="color: #80f;font-size: 25px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-shadow:none;">恭喜你!!!</span>
+                    <span style="color: #88f;font-size: 18px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-shadow:none;">第<span id="currentLevel"></span>关</span>
+                    <span style="color: #88f;font-size: 18px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-shadow:none;">你在<span id="timeEl"></span>秒内，一共走了<span id="score"></span>步</span>
+                </div>    
+                <br/>           
+                <div style="margin-left:50px; margin-right:50px;">
+                    <!--<a href="#retry" data-transition="fade" data-theme="b" data-role="button">重新开始这关</a>
                     <a href="#next" data-transition="fade" data-theme="a" data-role="button">下一关</a>
                     <a href="#home" data-role="button">首页</a>
-                    <a href="about.html" data-role="button" data-ajax="false">关于爱立信</a>
+                    <a href="about.html" data-role="button" data-ajax="false">关于爱立信</a>-->
+                    <a href="#retry" style="border:1px solid #fff; color:#fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:6px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:8px; text-shadow:none;">重新开始这关</a>
+                    <a href="#next" style="border:1px solid #fff; color:#fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:6px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:8px; text-shadow:none;">下一关</a>
+                    <a href="#home" style="border:1px solid #fff; color:#fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:6px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:8px; text-shadow:none;">首页</a>
+                    <a href="about.html" style="border:1px solid #fff; color:#fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:6px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:8px; text-shadow:none;" data-ajax="false">爱立信招聘</a>
                 </div>
             </div>
         </div>
                     
         <!-- Finised -->
-        <div data-role="page" id="finished">
+        <div data-role="page" id="finished" style="background-image:url(css/images/background.jpg); background-size:100% 100%; background-repeat:no-repeat; background-color:#fff;">
             <div data-theme="a" data-role="header">
                 <h3>
                     点亮爱立信图标
                 </h3>
             </div>
             <div data-role="content">
-                <p>恭喜你！你完成这个游戏的所有的关卡</p>
+                <!--<p>恭喜你！你完成这个游戏的所有的关卡</p>
                 <h3>更多信息,请查看爱立信相关信息</h3>
-                <a href="about.html">爱立信官网</a>
+                <a href="about.html">爱立信招聘</a>
                 <br/>
                 <div data-role="controlgroup">
                     <a href="#home" data-transition="fade" data-theme="b" data-role="button">首页</a>
+                </div>-->
+                <br/><br/>
+                <div>
+                	<span style="color: #88f;font-size: 25px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-shadow:none;">恭喜你!</span>
+                    <span style="color: #88f;font-size: 18px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-shadow:none;">你完成这个游戏的所有的关卡</span>                                                         
+                </div>
+                <br/><br/>
+                <div style="margin-left:50px; margin-right:50px;">
+                	<a href="about.html" style="border:1px solid #fff;color: #fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-decoration:none; border-radius:3px; text-shadow:none;" data-ajax="false">爱立信校园招聘</a>
+                    <a href="#home" style="border:1px solid #fff;color: #fff;font-size: 16px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:15px; text-shadow:none;">首页</a>
                 </div>
             </div>
         </div>                  

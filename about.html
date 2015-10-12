@@ -14,7 +14,8 @@
         <script src="js/game.js" type="text/javascript"></script>
         <script src="js/levels.js" type="text/javascript"></script>
         <script src="js/app.js" type="text/javascript"></script>
-                
+            
+        <!--    
         <script type="text/javascript">
 			$(document).ready(function() {
 				$top_height = $("div[data-role=header]").height();
@@ -40,13 +41,14 @@
 			.metro_color6 { background-color:#ef9c00;}
 			.metro_rec {width:48%; height:32%; float:left; margin:1%;}
          </style>
+         -->
         
     </head>
     <body style="text-align: center;">
                              
         <!-- About -->
-        <div data-role="page" id="about" data-position="fixed">
-            <div data-theme="a" data-role="header">
+        <div data-role="page" id="about" style="background-image:url(css/images/background1.png); background-size:100% 100%; background-repeat:no-repeat; background-color:#fff;">
+            <!--<div data-theme="a" data-role="header">
                 <h3>
                     爱立信
                 </h3>
@@ -88,10 +90,17 @@
             </div> 
             <div data-role="footer" data-theme="a" data-position="fixed">
             	<div data-role="navbar">
-                	<ul>
-                    	<!--<li><a href="index.html#home" data-ajax="false">返回</a></li>-->
+                	<ul>                    	
                         <li><a data-rel="back" data-ajax="false">返回</a></li>
                 	</ul>
+                </div>
+            </div>-->
+            <div data-role="content">
+            	<br/><br/>
+                <div><span style="color: #fff;font-size: 25px;text-align:center; width: 100%; display:block; padding:8px 0px; font-weight:normal; text-shadow:none;">爱立信<br/>2016校园招聘</span></div>  
+                <div style="margin-left:50px; margin-right:50px;">    
+                	<a href="show.html" style="border:1px solid #fff; color: #fff; font-size: 16px;text-align:center; width: 100%; display:block; padding:5px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:10px; text-shadow:none;" data-ajax="false">爱立信简介</a>
+                	<a href="http://www.ericssoncampus.com/" style="border:1px solid #fff; color: #fff; font-size: 16px;text-align:center; width: 100%; display:block; padding:5px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:10px; text-shadow:none;" data-ajax="false">爱立信校招官网</a>
                 </div>
             </div>
         </div>              

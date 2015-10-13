@@ -41,19 +41,19 @@ var game = function() {
 		
 		$window_width = $(window).width() - 40;
 		if(totcol - 2 === 1) {
-			$width = $window_width / 3;	
+			$width = $window_width / 3 + "px";	
 			//$to_width = $("#grid div").width();
 			$height = $width;			
 			$("#grid div div").height($height);
 		}
 		if(totcol - 2 === 2) {
-			$width = $window_width / 4;	
+			$width = $window_width / 4 + "px";	
 			//$to_width = $("#grid div").width();
 			$height = $width;			
 			$("#grid div div").height($height);
 		}
 		if(totcol - 2 === 2) {
-			$width = $window_width / 5;	
+			$width = $window_width / 5 + "px";	
 			//$to_width = $("#grid div").width();
 			$height = $width;			
 			$("#grid div div").height($height);

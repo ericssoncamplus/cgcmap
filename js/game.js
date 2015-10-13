@@ -34,10 +34,10 @@ var game = function() {
 		//var $grid_width = $("#grid").width();
 		//alert($grid_width);
 		
-		var $window_width = $(window).width();
-		var $each_grid_height = $window_width - 32;	
-		$each_grid_height = $each_grid_height + "px";
-		$("#grid").height($each_grid_height);
+		//var $window_width = $(window).width();
+		//var $each_grid_height = $window_width - 32;	
+		//$each_grid_height = $each_grid_height + "px";
+		//$("#grid").height($each_grid_height);
 		
         $("#grid  div.light").on("click", function() {
 			//alert($grid_width);

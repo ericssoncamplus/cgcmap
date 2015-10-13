@@ -41,23 +41,16 @@ var game = function() {
 		
 		$window_width = $(window).width() - 40;
 		if(totcol - 2 === 1) {
-			$width = $window_width / 3 + "px";	
-			//$to_width = $("#grid div").width();
-			$height = $width;			
-			$("#grid div div").height($height);
+			$width = $window_width / 3 + "px";				
 		}
 		if(totcol - 2 === 2) {
-			$width = $window_width / 4 + "px";	
-			//$to_width = $("#grid div").width();
-			$height = $width;			
-			$("#grid div div").height($height);
+			$width = $window_width / 4 + "px";				
 		}
-		if(totcol - 2 === 2) {
+		if(totcol - 2 === 3) {
 			$width = $window_width / 5 + "px";	
-			//$to_width = $("#grid div").width();
-			$height = $width;			
-			$("#grid div div").height($height);
 		}
+		$height = $width;			
+		$("#grid div div").width($width).height($height);
 				
         $("#grid  div.light").on("click", function() {
 			//alert($grid_width);
@@ -68,25 +61,18 @@ var game = function() {
 			//alert($height);
 			//alert($to_width);
 			
-				$window_width = $(window).width() - 40;
-				if(totcol - 2 === 1) {
-					$width = $window_width / 3;	
-					//$to_width = $("#grid div").width();
-					$height = $width;			
-					$("#grid div div").height($height);
-				}
-				if(totcol - 2 === 2) {
-					$width = $window_width / 4;	
-					//$to_width = $("#grid div").width();
-					$height = $width;			
-					$("#grid div div").height($height);
-				}
-				if(totcol - 2 === 2) {
-					$width = $window_width / 5;	
-					//$to_width = $("#grid div").width();
-					$height = $width;			
-					$("#grid div div").height($height);
-				}
+			$window_width = $(window).width() - 40;
+			if(totcol - 2 === 1) {
+				$width = $window_width / 3 + "px";				
+			}
+			if(totcol - 2 === 2) {
+				$width = $window_width / 4 + "px";				
+			}
+			if(totcol - 2 === 3) {
+				$width = $window_width / 5 + "px";	
+			}
+			$height = $width;			
+			$("#grid div div").width($width).height($height);
 			
             var index = $(this).index();
             var col = index % totcol;

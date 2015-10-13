@@ -40,19 +40,19 @@ var game = function() {
 		//$("#grid").height($each_grid_height);
 		
 		$window_width = $(window).width() - 40;
-		if(totcol - 2 == 1) {
+		if(totcol - 2 === 1) {
 			$width = $window_width / 3;	
 			//$to_width = $("#grid div").width();
 			$height = $width;			
 			$("#grid div div").height($height);
 		}
-		if(totcol - 2 == 2) {
+		if(totcol - 2 === 2) {
 			$width = $window_width / 4;	
 			//$to_width = $("#grid div").width();
 			$height = $width;			
 			$("#grid div div").height($height);
 		}
-		if(totcol - 2 == 2) {
+		if(totcol - 2 === 2) {
 			$width = $window_width / 5;	
 			//$to_width = $("#grid div").width();
 			$height = $width;			
@@ -67,6 +67,26 @@ var game = function() {
 			//alert($width);
 			//alert($height);
 			//alert($to_width);
+			
+				$window_width = $(window).width() - 40;
+				if(totcol - 2 === 1) {
+					$width = $window_width / 3;	
+					//$to_width = $("#grid div").width();
+					$height = $width;			
+					$("#grid div div").height($height);
+				}
+				if(totcol - 2 === 2) {
+					$width = $window_width / 4;	
+					//$to_width = $("#grid div").width();
+					$height = $width;			
+					$("#grid div div").height($height);
+				}
+				if(totcol - 2 === 2) {
+					$width = $window_width / 5;	
+					//$to_width = $("#grid div").width();
+					$height = $width;			
+					$("#grid div div").height($height);
+				}
 			
             var index = $(this).index();
             var col = index % totcol;

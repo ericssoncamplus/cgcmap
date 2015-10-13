@@ -39,12 +39,17 @@ var game = function() {
 		//$each_grid_height = $each_grid_height + "px";
 		//$("#grid").height($each_grid_height);
 		
+		$width = $("#grid div div").width();	
+		$height = $("#grid div div").width() + "%";				
+		$("#grid div div").height($height);
+				
         $("#grid  div.light").on("click", function() {
 			//alert($grid_width);
 			//alert($window_width);
 			//alert($each_grid_height);
 			//alert($grid_width);
-			
+			//alert($width);
+			//alert($height);
 			
             var index = $(this).index();
             var col = index % totcol;

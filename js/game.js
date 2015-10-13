@@ -39,9 +39,25 @@ var game = function() {
 		//$each_grid_height = $each_grid_height + "px";
 		//$("#grid").height($each_grid_height);
 		
-		$width = $("#grid div div").width();	
-		$height = $("#grid div div").width() + "%";				
-		$("#grid div div").height($height);
+		$window_width = $(window).width() - 40;
+		if(totcol - 2 == 1) {
+			$width = $window_width / 3;	
+			//$to_width = $("#grid div").width();
+			$height = $width;			
+			$("#grid div div").height($height);
+		}
+		if(totcol - 2 == 2) {
+			$width = $window_width / 4;	
+			//$to_width = $("#grid div").width();
+			$height = $width;			
+			$("#grid div div").height($height);
+		}
+		if(totcol - 2 == 2) {
+			$width = $window_width / 5;	
+			//$to_width = $("#grid div").width();
+			$height = $width;			
+			$("#grid div div").height($height);
+		}
 				
         $("#grid  div.light").on("click", function() {
 			//alert($grid_width);
@@ -50,6 +66,7 @@ var game = function() {
 			//alert($grid_width);
 			//alert($width);
 			//alert($height);
+			//alert($to_width);
 			
             var index = $(this).index();
             var col = index % totcol;

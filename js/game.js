@@ -35,9 +35,9 @@ var game = function() {
 		//alert($grid_width);
 		
 		var $window_width = $(window).width();
-		var $each_grid_height = $window_width - 32;		
+		var $each_grid_height = $window_width - 32;	
 		$each_grid_height = $each_grid_height + "px";
-		$("#grid").width("100%").height($each_grid_height);
+		$("#grid").height($each_grid_height);
 		
         $("#grid  div.light").on("click", function() {
 			//alert($grid_width);

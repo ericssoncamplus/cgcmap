@@ -42,7 +42,7 @@ var game = function() {
 				
         $("#grid  div.light").on("click", function() {	
 			
-			$window_width = $(window).width() - 40;
+			/*$window_width = $(window).width() - 40;
 			if(totcol - 2 === 1) {
 				$width = $window_width / 3;				
 			}
@@ -53,7 +53,7 @@ var game = function() {
 				$width = $window_width / 5;	
 			}
 			$each_height = $width + "px";		
-			$("#grid div div").height($each_height);
+			$("#grid div div").height($each_height);*/
 			
             var index = $(this).index();
             var col = index % totcol;

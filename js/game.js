@@ -19,7 +19,7 @@ var game = function() {
 				/*$grid_width = $(".light").width();
 				$grid_width = $grid_width + "px";*/
                 if (data[i][j] === 1) {
-                    html += '<div class="ui-bar ui-bar-c"><img width="100%" height="100%"  src="css/images/ECON_white2.png"/></div>';
+                    html += '<div class="ui-bar ui-bar-c"><img width="100%" height="100%"   src="css/images/ECON_white2.png"/></div>';
                 } else {
                     html += '<div class="ui-bar ui-bar-b"><img width="100%" height="100%" src="css/images/ECON_white2.png"/></div>';
                 }
@@ -41,16 +41,18 @@ var game = function() {
 		
 		$window_width = $(window).width() - 40;
 		if(totcol - 2 === 1) {
-			$width = $window_width / 3 + "px";				
+			$width = $window_width / 3;					
 		}
 		if(totcol - 2 === 2) {
-			$width = $window_width / 4 + "px";				
+			$width = $window_width / 4;				
 		}
 		if(totcol - 2 === 3) {
-			$width = $window_width / 5 + "px";	
+			$width = $window_width / 5;	
 		}
-		$height = $width;			
-		$("#grid div div").width($width).height($height);
+		$each_height = $width + 1 + "px";	
+		//$each_width = $width - 10 + "px"		
+		//$("#grid div div").width($each_width).height($each_height);
+		$("#grid div div").height($each_height);
 				
         $("#grid  div.light").on("click", function() {
 			//alert($grid_width);
@@ -63,16 +65,18 @@ var game = function() {
 			
 			$window_width = $(window).width() - 40;
 			if(totcol - 2 === 1) {
-				$width = $window_width / 3 + "px";				
+				$width = $window_width / 3;				
 			}
 			if(totcol - 2 === 2) {
-				$width = $window_width / 4 + "px";				
+				$width = $window_width / 4;				
 			}
 			if(totcol - 2 === 3) {
-				$width = $window_width / 5 + "px";	
+				$width = $window_width / 5;	
 			}
-			$height = $width;			
-			$("#grid div div").width($width).height($height);
+			$each_height = $width + 1 + "px";	
+			//$each_width = $width  - 10 + "px"		
+			//$("#grid div div").width($each_width).height($each_height);
+			$("#grid div div").height($each_height);
 			
             var index = $(this).index();
             var col = index % totcol;

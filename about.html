@@ -8,121 +8,60 @@
         <title>
         </title>
         <link rel="stylesheet" href="css/jquery.mobile-1.3.0.css" type="text/css" />
-        <link rel="stylesheet" href="css/app.css" type="text/css" />
         <script src="js/jquery.js" type="text/javascript"></script>
-        <script src="js/jquery.mobile.js" type="text/javascript"></script>
-        <script src="js/game.js" type="text/javascript"></script>
-        <script src="js/levels.js" type="text/javascript"></script>
-        <script src="js/app.js" type="text/javascript"></script>
+        <script src="js/jquery.mobile.js" type="text/javascript"></script>     
         
-        <!--
-        <script type="text/javascript">
-        	$(document).ready(function() {
-                //$window_width = $(window).width();
-				$aaa_width = $("#aaa").width();
-				$aaa_m_width = $("#aaa_m").width();
-				$m_width = ($aaa_width - $aaa_m_width) + "px";
-				$("#div_m").style.marginTop = '10000px';
-				//alert($window_width);
-				//alert($aaa_width);
-				//alert($div_m_width);
-				//alert($m_width);
-            });
-        </script>
-        -->
-            
-        <!--    
-        <script type="text/javascript">
-			$(document).ready(function() {
-				$top_height = $("div[data-role=header]").height();
-				$bottom_height = $("div[data-role=footer]").height();
-				$body_height = $(window).height() - $top_height - $bottom_height;
-				
-				$pic_height = $body_height / 2;
-				$pic_height = $pic_height + "px";
-				$("div[data-role=main_pic]").width("100%").height($pic_height);
-				
-				$body_height = $body_height / 2 - 15;
-				$body_height = $body_height + "px";
-				$("div[data-role=metro_body]").width("100%").height($body_height);				
-			});
-		 </script>
-         <style type="text/css">
-         	* { margin:0px; padding:0px;}
-			.metro_color1 { background-color:#00aeef;}
-			.metro_color2 { background-color:#ed2b84;}
-			.metro_color3 { background-color:#ed82d4;}
-			.metro_color4 { background-color:#2ebf1b;}
-			.metro_color5 { background-color:#5f34ba;}
-			.metro_color6 { background-color:#ef9c00;}
-			.metro_rec {width:48%; height:32%; float:left; margin:1%;}
-         </style>
-         -->
+        <style type="text/css">
+        	#about {
+				background-image:url(css/images/background1.png); 
+				background-size:100% 100%; 
+				background-repeat:no-repeat; 
+				background-color:#fff;	
+			}
+			
+			#about_span {
+				color: #fff;
+				font-size: 28px;
+				text-align:center; 
+				width: 100%; 
+				display:block; 
+				padding:6px 0px; 
+				font-weight:normal; 
+				text-shadow:none;
+			}
+			
+			#about_div a {
+				border:1px solid #fff; 
+				color: #fff; 
+				font-size: 16px;
+				text-align:center; 
+				width: 100%; 
+				display:block; 
+				padding:5px 0px; 
+				font-weight:normal; 
+				text-decoration:none; 
+				border-radius:3px; 
+				margin-top:10px; 
+				text-shadow:none;
+			}
+        </style>   
         
     </head>
     <body style="text-align: center;">
                              
         <!-- About -->
-        <div data-role="page" id="about" style="background-image:url(css/images/background1.png); background-size:100% 100%; background-repeat:no-repeat; background-color:#fff;">
+        <div data-role="page" id="about">
             <div data-theme="a" data-role="header">
                 <h3>爱立信</h3>
                 <a data-rel="back" data-icon="back" data-iconpos="right" data-theme="a" class="ui-btn-right" data-ajax="false">返回</a>
-            </div>
-            <!--<div data-role="main_pic">            		
-                <img src="css/images/ruidian.jpg" width="100%" height="100%"> 
-            </div>                                    
-            <div data-role="metro_body" class="metro_rec" data-theme="e">          	
-                <div class="metro_color1 metro_rec">
-                    <a href="show.html" data-ajax="false">
-                        <img src="css/images/icon1.png" width="100%" height="100%">
-                    </a>
-                </div>
-                <div class="metro_color2 metro_rec">
-                    <a href="http://www.ericsson.com/cn/" data-ajax="false">
-                        <img src="css/images/icon2.png" width="100%" height="100%">
-                    </a>
-                </div>
-                <div class="metro_color3 metro_rec">
-                    <a href="http://www.dajie.com/corp/2787043/project/58983" data-ajax="false">
-                        <img src="css/images/icon3.png" width="100%" height="100%">
-                    </a>
-                </div>
-                <div class="metro_color4 metro_rec">
-                    <a href="http://www.ericssoncampus.com/" data-ajax="false">
-                        <img src="css/images/icon4.png" width="100%" height="100%">
-                    </a>
-                </div>
-                <div class="metro_color5 metro_rec">
-                    <a href="http://i.youku.com/u/UMzA2MTI2MDQ4" data-ajax="false">
-                        <img src="css/images/icon5.png" width="100%" height="100%">
-                    </a>
-                </div>  
-                <div class="metro_color6 metro_rec">
-                    <a href="http://weibo.com/ericssonweibo?sudaref=www.ericsson.com" data-ajax="false">
-                        <img src="css/images/icon6.png" width="100%" height="100%">
-                    </a>
-                </div>                              	 
-            </div> 
-            <div data-role="footer" data-theme="a" data-position="fixed">
-            	<div data-role="navbar">
-                	<ul>                    	
-                        <li><a data-rel="back" data-ajax="false">返回</a></li>
-                	</ul>
-                </div>
-            </div>-->
+            </div>           
             <div data-role="content">            	
-                <div><span style="color: #fff;font-size: 28px;text-align:center; width: 100%; display:block; padding:6px 0px; font-weight:normal; text-shadow:none;">爱立信<br/>2016校园招聘</span></div>  
-                <div style="margin-left:50px; margin-right:50px;">    
-                	<a id="aaa" href="show.html" style="border:1px solid #fff; color: #fff; font-size: 16px;text-align:center; width: 100%; display:block; padding:5px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:10px; text-shadow:none;" data-ajax="false">爱立信简介</a>
-                	<a href="http://www.ericssoncampus.com/" style="border:1px solid #fff; color: #fff; font-size: 16px;text-align:center; width: 100%; display:block; padding:5px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:10px; text-shadow:none;" data-ajax="false">爱立信校招官网</a>              
-					<!--<div class="ui-grid-a">
-                    	<div class="ui-block-a"></div>                                                
-                        <div class="ui-block-c">
-                       		<div style="height: 60px; width: 60px">
-                    			<a id="aaa_m" data-rel="back" data-ajax="false" style="border:1px solid #fff; color: #fff; font-size: 16px;text-align:center; width: 100%; display:inline-block; padding:5px 0px; font-weight:normal; text-decoration:none; border-radius:3px; margin-top:10px; text-shadow:none;">返回</a>
-                   			</div>
-                   		</div>
-                    </div>-->
+                <div id="about_span">
+                	<span>爱立信<br/>2016校园招聘</span>
+                </div>  
+                <div id="about_div" style="margin-left:50px; margin-right:50px;">    
+                	<a href="show.html" data-ajax="false">爱立信简介</a>
+                	<a href="http://www.ericssoncampus.com/" data-ajax="false">爱立信校招官网</a>              
                 </div>
             </div>
         </div>              

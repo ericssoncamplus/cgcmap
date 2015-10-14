@@ -7,19 +7,14 @@ var game = function() {
         var leters = ['a', 'b', 'c', 'd', 'e'];
         var totrow = data.length;
         var totcol = data[0].length;
-        var html = '<div data-role="huangshouxi" class="ui-grid-' + leters[totcol - 2] + ' ui-grid-height-x ">';
-		//var $grid_width = $("div[data-role=huangshouxi]").width();
-		//var $window_width = $(window).width();		
-		//alert($grid_width);
+        var html = '<div class="ui-grid-' + leters[totcol - 2] + '">';		
         clearInterval(timout);
         $.each(data, function(i) {
             var self = this;
             $.each(self, function(j) {
-                html += '<div class="ui-block-' + leters[j % 5 ] + ' light">';
-				/*$grid_width = $(".light").width();
-				$grid_width = $grid_width + "px";*/
+                html += '<div class="ui-block-' + leters[j % 5 ] + ' light style_border">';
                 if (data[i][j] === 1) {
-                    html += '<div class="ui-bar ui-bar-c"><img width="100%" height="100%"   src="css/images/ECON_white2.png"/></div>';
+                    html += '<div class="ui-bar ui-bar-c"><img width="100%" height="100%" src="css/images/ECON_white2.png"/></div>';
                 } else {
                     html += '<div class="ui-bar ui-bar-b"><img width="100%" height="100%" src="css/images/ECON_white2.png"/></div>';
                 }
@@ -29,39 +24,23 @@ var game = function() {
         html += '</div>';				
         $("#grid").html(html);
 		
-		//var $grid_width = $("div[data-role=huangshouxi]").width();
-		//var $grid_width = $("div[data-role=content]").width();
-		//var $grid_width = $("#grid").width();
-		//alert($grid_width);
-		
-		//var $window_width = $(window).width();
-		//var $each_grid_height = $window_width - 32;	
-		//$each_grid_height = $each_grid_height + "px";
-		//$("#grid").height($each_grid_height);
+		//$("#grid div div").style.border = "10px solid red";
 		
 		$window_width = $(window).width() - 40;
 		if(totcol - 2 === 1) {
-			$width = $window_width / 3;					
+			$width = $window_width / 3;							
 		}
 		if(totcol - 2 === 2) {
-			$width = $window_width / 4;				
+			$width = $window_width / 4;			
 		}
 		if(totcol - 2 === 3) {
 			$width = $window_width / 5;	
 		}
-		$each_height = $width + 1 + "px";	
-		//$each_width = $width - 10 + "px"		
-		//$("#grid div div").width($each_width).height($each_height);
+		$each_height = $width + "px";	
 		$("#grid div div").height($each_height);
+		//$("#grid div").style.border = '1px solid red';
 				
-        $("#grid  div.light").on("click", function() {
-			//alert($grid_width);
-			//alert($window_width);
-			//alert($each_grid_height);
-			//alert($grid_width);
-			//alert($width);
-			//alert($height);
-			//alert($to_width);
+        $("#grid  div.light").on("click", function() {	
 			
 			$window_width = $(window).width() - 40;
 			if(totcol - 2 === 1) {
@@ -73,9 +52,7 @@ var game = function() {
 			if(totcol - 2 === 3) {
 				$width = $window_width / 5;	
 			}
-			$each_height = $width + 1 + "px";	
-			//$each_width = $width  - 10 + "px"		
-			//$("#grid div div").width($each_width).height($each_height);
+			$each_height = $width + "px";		
 			$("#grid div div").height($each_height);
 			
             var index = $(this).index();

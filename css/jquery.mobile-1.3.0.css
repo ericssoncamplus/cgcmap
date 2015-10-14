@@ -151,7 +151,7 @@
 /* B
 -----------------------------------------------------------------------------------------------------------*/
 .ui-bar-b {
-	border: 1px solid 		#456f9a /*{b-bar-border}*/;
+	border: 0px solid 		#456f9a /*{b-bar-border}*/;
 	background: 			#5e87b0 /*{b-bar-background-color}*/;
 	color: 					#fff /*{b-bar-color}*/;
 	font-weight: bold;
@@ -289,7 +289,7 @@
 /* C
 -----------------------------------------------------------------------------------------------------------*/
 .ui-bar-c {
-	border: 1px solid 		#b3b3b3 /*{c-bar-border}*/;
+	border: 0px solid 		#b3b3b3 /*{c-bar-border}*/;
 	background: 			#eee /*{c-bar-background-color}*/;
 	color: 					#3e3e3e /*{c-bar-color}*/;
 	font-weight: bold;
@@ -1923,15 +1923,15 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-grid-a .ui-block-a { clear: left; }
 /* grid b: 33/33/33 */
 .ui-grid-b .ui-block-a, .ui-grid-b .ui-block-b, .ui-grid-b .ui-block-c { width: 33.25%; }
-.ui-grid-b > :nth-child(n) { width: 33.333%; margin-right: -.5px; margin-bottom: -4.5px }
+.ui-grid-b > :nth-child(n) { width: 33.333%; margin-right: 0px; margin-bottom: 0px }
 .ui-grid-b .ui-block-a { clear: left; }
 /* grid c: 25/25/25/25 */
 .ui-grid-c .ui-block-a, .ui-grid-c .ui-block-b, .ui-grid-c .ui-block-c, .ui-grid-c .ui-block-d { width: 24.925%; }
-.ui-grid-c > :nth-child(n) { width: 25%; margin-right: -.5px; margin-bottom: -4.5px}
+.ui-grid-c > :nth-child(n) { width: 25%; margin-right: 0px; margin-bottom: 0px}
 .ui-grid-c .ui-block-a { clear: left; }
 /* grid d: 20/20/20/20/20 */
 .ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 19.925%; }
-.ui-grid-d > :nth-child(n) { width: 20%; margin-bottom: -4.5px}
+.ui-grid-d > :nth-child(n) { width: 20%; margin-bottom: 0px}
 .ui-grid-d .ui-block-a { clear: left; }
 /* preset breakpoint to switch to stacked grid styles below 35em (560px) */
 @media all and (max-width: 35em) {

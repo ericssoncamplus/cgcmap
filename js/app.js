@@ -29,6 +29,15 @@ $(document).on("pagebeforechange", function(e, data) {
                 toPage = "home";
             }
             break;
+			
+		/*case "success":
+			if(currentLevel > 0) {
+				
+            } else {
+                
+            }
+			break;	*/
+			
         case "levels":
             renderLevelSelect(dif);
     }

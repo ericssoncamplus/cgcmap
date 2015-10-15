@@ -14,10 +14,20 @@ var game = function() {
             var self = this;
             $.each(self, function(j) {
                 html += '<div class="ui-block-' + leters[j % 5 ] + ' light style_border">';
-                if (data[i][j] === 1) {
+                /*if (data[i][j] === 1) {
                     html += '<div class="ui-bar ui-bar-c"><img width="100%" height="100%" src="css/images/ECON_white2.png"/></div>';
                 } else {
                     html += '<div class="ui-bar ui-bar-b"><img width="100%" height="100%" src="css/images/ECON_white2.png"/></div>';
+                }*/
+				/*if (data[i][j] === 1) {
+                    html += '<div><img width="100%" height="100%" src="css/images/campus recruitment-14.png"/></div>';
+                } else {
+                    html += '<div><img width="100%" height="100%" src="css/images/campus recruitment-16.png"/></div>';
+                }*/
+				 if (data[i][j] === 1) {
+                    html += '<div class="ui-bar ui-bar-c"><img width="100%" height="100%" src="css/images/campus recruitment-15.png"/></div>';
+                } else {
+                    html += '<div class="ui-bar ui-bar-b"><img width="100%" height="100%" src="css/images/campus recruitment-15.png"/></div>';
                 }
                 html += '</div>';
             });

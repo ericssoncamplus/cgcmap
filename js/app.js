@@ -46,8 +46,13 @@ function renderLevelSelect(dif) {
 }
 
 function finishedGame(totalMoves, time) {
-	$("#currentLevel").html(currentLevel + 1);
-    $("#score").html(totalMoves);
-    $("#timeEl").html(time);
+	$("#currentLevel1").html(currentLevel + 1);
+    $("#score1").html(totalMoves);
+    $("#timeEl1").html(time);
+	
+	$("#currentLevel2").html(currentLevel + 1);
+    $("#score2").html(totalMoves);
+    $("#timeEl2").html(time);
+	
     $.mobile.changePage("#success", {transition: "slideup"});
 }

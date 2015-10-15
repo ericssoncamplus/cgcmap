@@ -8,6 +8,7 @@ var game = function() {
         var totrow = data.length;
         var totcol = data[0].length;
         var html = '<div class="ui-grid-' + leters[totcol - 2] + '">';		
+		
         clearInterval(timout);
         $.each(data, function(i) {
             var self = this;
@@ -24,8 +25,6 @@ var game = function() {
         html += '</div>';				
         $("#grid").html(html);
 		
-		//$("#grid div div").style.border = "10px solid red";
-		
 		$window_width = $(window).width() - 40;
 		if(totcol - 2 === 1) {
 			$width = $window_width / 3;							
@@ -38,23 +37,8 @@ var game = function() {
 		}
 		$each_height = $width + "px";	
 		$("#grid div div").height($each_height);
-		//$("#grid div").style.border = '1px solid red';
 				
-        $("#grid  div.light").on("click", function() {	
-			
-			/*$window_width = $(window).width() - 40;
-			if(totcol - 2 === 1) {
-				$width = $window_width / 3;				
-			}
-			if(totcol - 2 === 2) {
-				$width = $window_width / 4;				
-			}
-			if(totcol - 2 === 3) {
-				$width = $window_width / 5;	
-			}
-			$each_height = $width + "px";		
-			$("#grid div div").height($each_height);*/
-			
+        $("#grid  div.light").on("click", function() {							
             var index = $(this).index();
             var col = index % totcol;
             var row = (index - col) / totcol;

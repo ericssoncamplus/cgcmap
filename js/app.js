@@ -64,4 +64,6 @@ function finishedGame(totalMoves, time) {
     $("#timeEl2").html(time);
 	
     $.mobile.changePage("#success", {transition: "slideup"});
+	/*$.mobile.changePage("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/success.html", {transition: "slideup"});*/
+	/*$.mobile.changePage("success.html", {transition: "slideup"});*/
 }

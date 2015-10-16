@@ -6,6 +6,8 @@ $(document).on("pagebeforechange", function(e, data) {
     var page = data.toPage.toString().split("#");
     var toPagePrefix = page[0];
     var toPage = page[1];
+	
+	//alert(toPagePrefix);
  
     switch (toPage) {
         case "game":
@@ -43,6 +45,7 @@ $(document).on("pagebeforechange", function(e, data) {
     }
     window.localStorage.setItem("level", currentLevel);
     data.toPage = toPagePrefix + "#" + toPage;
+	//data.toPage = toPagePrefix + toPage;
     $.mobile.hidePageLoadingMsg();
 });
 $('#time').button('disable');
@@ -66,4 +69,6 @@ function finishedGame(totalMoves, time) {
     $.mobile.changePage("#success", {transition: "slideup"});
 	/*$.mobile.changePage("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/success.html", {transition: "slideup"});*/
 	/*$.mobile.changePage("success.html", {transition: "slideup"});*/
+	//window.location.href="success.html";
+	
 }

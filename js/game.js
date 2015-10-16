@@ -7,7 +7,9 @@ var game = function() {
         var leters = ['a', 'b', 'c', 'd', 'e'];
         var totrow = data.length;
         var totcol = data[0].length;
-        var html = '<div class="ui-grid-' + leters[totcol - 2] + '">';		
+        var html = '<img src="css/images/e.jpg" width="0px" height="0px"/>';
+		
+		html += '<div class="ui-grid-' + leters[totcol - 2] + '">';		
 		
         clearInterval(timout);
         $.each(data, function(i) {

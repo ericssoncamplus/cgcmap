@@ -12,9 +12,7 @@
        	<!--<link rel="stylesheet" href="css/index.css" type="text/css"/>-->
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/jquery.mobile.js" type="text/javascript"></script>
-        <script src="js/game.js" type="text/javascript"></script>
-        <script src="js/levels.js" type="text/javascript"></script>
-        <!--<script src="js/app.js" type="text/javascript"></script>  -->       
+    
                           
         <style type="text/css">			
 			
@@ -95,8 +93,7 @@
 				return vars;
 			}
 			$(document).on("pagebeforechange", function(e, data) {	
-				//var d = new Date().getSeconds();		    
-				//$("#test").attr("data-title", d);
+
 				var time = getUrlVars()["time"];
 				var currentLevel = getUrlVars()["currentLevel"];	
 				var totalMoves = getUrlVars()["totalMoves"];	
@@ -107,28 +104,11 @@
 				var successContent = time + "秒" + totalMoves + "步过第" + currentLevel + "关,不服来战";
 				$("#success").attr("data-title", successContent);
 				
-				//var timestamp1 = new Date().getTime();				
-				//alert(timestamp1);				
+				
 				var url_timestamp = getUrlVars()["timestamp"];				
-				//alert(timestamp);				
-	
-				//window.localStorage.setItem("level", currentLevel);
-				//var level = window.localStorage.getItem("level");
-				//alert(level);
-				
-				//alert(level === currentLevel);
-				
-				//window.localStorage.setItem("timestamp1", timestamp);
+
 				var window_timestamp = window.localStorage.getItem("timestamp");
-				//alert(timestamp1);
-				
-				//alert(timestamp1 === timestamp);
-				
-				//alert(timestamp === timestamp1);
-				
-				//var hsx = getUrlVars()["huangshouxi"];	
-				
-				//var hsx1 = "huangshouxi"
+
 				
 				if(url_timestamp !== window_timestamp) {
 					window.location.href="index.html#home";
@@ -150,11 +130,7 @@
     <body style="text-align: center;">            
           
         <div data-role="page" id="success">
-            <!--<div data-theme="a" data-role="header">              
-                <h3>
-                	第<span id="currentLevel1"></span>关,<span id="timeEl1"></span>秒<span id="score1"></span>步就过关了,你也来试试 
-				</h3> 
-            </div>-->
+
             <div data-role="content">  
 				<img src="css/images/e.jpg" width="0px" height="0px"/>
                 <div>

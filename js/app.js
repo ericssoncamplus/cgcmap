@@ -60,32 +60,12 @@ function renderLevelSelect(dif) {
 
 function finishedGame(totalMoves, time) {
 	
-	//level = (currentLevel + 1);
-	
-	level = currentLevel;
-	
-	/*$("#currentLevel1").html(currentLevel);
-    $("#score1").html(totalMoves);
-    $("#timeEl1").html(time);*/
-	
-	$("#currentLevel2").html(level);
-    $("#score2").html(totalMoves);
-    $("#timeEl2").html(time);
+
+	var gamelevel = (currentLevel + 1);
 	
 	timestamp = new Date().getTime();
-	
-	//window.localStorage.setItem("level", level);
+
 	window.localStorage.setItem("timestamp", timestamp);
-	
-	//var successContent = time + "秒" + totalMoves + "步过第" + (currentLevel + 1) + "关,不服来战";
-	
-	//$("#success").attr("data-title", successContent);
-	
-    //$.mobile.changePage("#success?level="+currentLevel, {transition: "slideup"});
-	/*$.mobile.changePage("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/success.html", {transition: "slideup"});*/
-	/*$.mobile.changePage("success.html", {transition: "slideup"});*/
-	//window.location.href="test.html?currentLevel=5";
-	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves;
-	window.location.href="success.html#success?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves + "&timestamp=" + timestamp;
-	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves + "&huangshouxi=huangshouxi";
+
+	window.location.href="success.html#success?time=" + time + "&currentLevel=" + gamelevel + "&totalMoves=" + totalMoves + "&timestamp=" + timestamp;
 }

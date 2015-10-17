@@ -71,7 +71,7 @@ function finishedGame(totalMoves, time) {
 	
 	timestamp = new Date().getTime();
 	
-	window.localStorage.setItem("level", level);
+	//window.localStorage.setItem("level", level);
 	window.localStorage.setItem("timestamp", timestamp);
 	
 	//var successContent = time + "秒" + totalMoves + "步过第" + (currentLevel + 1) + "关,不服来战";

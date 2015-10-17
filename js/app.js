@@ -59,13 +59,13 @@ function renderLevelSelect(dif) {
 
 function finishedGame(totalMoves, time) {
 	
-	//level = (currentLevel + 1);
+	level_count = (currentLevel + 1);
 	
 	/*$("#currentLevel1").html(currentLevel);
     $("#score1").html(totalMoves);
     $("#timeEl1").html(time);*/
 	
-	$("#currentLevel2").html(currentLevel);
+	$("#currentLevel2").html(level_count);
     $("#score2").html(totalMoves);
     $("#timeEl2").html(time);
 	
@@ -83,6 +83,6 @@ function finishedGame(totalMoves, time) {
 	/*$.mobile.changePage("success.html", {transition: "slideup"});*/
 	//window.location.href="test.html?currentLevel=5";
 	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves;
-	window.location.href="success.html?time=" + time + "&currentLevel=" + currentLevel + "&totalMoves=" + totalMoves + "&timestamp=" + timestamp;
+	window.location.href="success.html?time=" + time + "&currentLevel=" + level_count + "&totalMoves=" + totalMoves + "&timestamp=" + timestamp;
 	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves + "&huangshouxi=huangshouxi";
 }

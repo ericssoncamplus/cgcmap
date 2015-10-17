@@ -65,10 +65,13 @@
 						
         </style>
         
-        <!--<script type="text/javascript">
+        <script type="text/javascript">
 			$(document).ready(function() {
+				//alert(window.location.host);
 				//window.location.replace("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/index.html#home");
 				//var url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+				//var success_url = 
+				//alert(url);
 				//var success_url = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;				
 				//alert(url);
 				//if(url === success_url) {
@@ -76,7 +79,7 @@
 					//window.location.replace("http://ericssoncamplus.github.io/cgcmap/index.html#home");
 				//}				
             });
-        </script>-->		
+        </script>	
 		
 		<script type="text/javascript">
 			function getUrlVars()
@@ -103,13 +106,32 @@
 				var successContent = time + "秒" + totalMoves + "步过第" + currentLevel + "关,不服来战";
 				$("#success").attr("data-title", successContent);
 				
-				if(currentLevel == 0) {
-					//window.location.replace("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/index.html#home");
+				//var timestamp1 = new Date().getTime();				
+				//alert(timestamp1);				
+				var url_timestamp = getUrlVars()["timestamp"];				
+				//alert(timestamp);				
+	
+				//window.localStorage.setItem("level", currentLevel);
+				//var level = window.localStorage.getItem("level");
+				//alert(level);
+				
+				//alert(level === currentLevel);
+				
+				//window.localStorage.setItem("timestamp1", timestamp);
+				var window_timestamp = window.localStorage.getItem("timestamp");
+				//alert(timestamp1);
+				
+				//alert(timestamp1 === timestamp);
+				
+				//alert(timestamp === timestamp1);
+				
+				//var hsx = getUrlVars()["huangshouxi"];	
+				
+				//var hsx1 = "huangshouxi"
+				
+				if(url_timestamp !== window_timestamp) {
 					window.location.href="index.html#home";
 				}
-				/*else {
-					window.location.href="index.html#retry";
-				}*/
 				
 			});
 			function backretry() {
@@ -126,7 +148,7 @@
     </head>
     <body style="text-align: center;">            
           
-        <div data-role="page" id="success" id="success">
+        <div data-role="page" id="success">
             <!--<div data-theme="a" data-role="header">              
                 <h3>
                 	第<span id="currentLevel1"></span>关,<span id="timeEl1"></span>秒<span id="score1"></span>步就过关了,你也来试试 

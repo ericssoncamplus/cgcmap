@@ -69,7 +69,10 @@ function finishedGame(totalMoves, time) {
     $("#score2").html(totalMoves);
     $("#timeEl2").html(time);
 	
+	timestamp = new Date().getTime();
 	
+	window.localStorage.setItem("level", level);
+	window.localStorage.setItem("timestamp", timestamp);
 	
 	//var successContent = time + "秒" + totalMoves + "步过第" + (currentLevel + 1) + "关,不服来战";
 	
@@ -80,6 +83,6 @@ function finishedGame(totalMoves, time) {
 	/*$.mobile.changePage("success.html", {transition: "slideup"});*/
 	//window.location.href="test.html?currentLevel=5";
 	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves;
-	window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves;
-	
+	window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves + "&timestamp=" + timestamp;
+	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves + "&huangshouxi=huangshouxi";
 }

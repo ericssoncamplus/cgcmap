@@ -61,9 +61,9 @@ function finishedGame(totalMoves, time) {
 	
 	//level = (currentLevel + 1);
 	
-	$("#currentLevel1").html(currentLevel);
+	/*$("#currentLevel1").html(currentLevel);
     $("#score1").html(totalMoves);
-    $("#timeEl1").html(time);
+    $("#timeEl1").html(time);*/
 	
 	$("#currentLevel2").html(currentLevel);
     $("#score2").html(totalMoves);

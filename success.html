@@ -100,11 +100,11 @@
 				var time = getUrlVars()["time"];
 				var currentLevel = getUrlVars()["currentLevel"];	
 				var totalMoves = getUrlVars()["totalMoves"];	
-				var currentLevel2 = currentLevel + 1;
+				//var currentLevel2 = currentLevel + 1;
 				$("#timeEl2").text(time);
 				$("#currentLevel2").text(currentLevel2);		
 				$("#score2").text(totalMoves);
-				var successContent = time + "秒" + totalMoves + "步过第" + currentLevel2 + "关,不服来战";
+				var successContent = time + "秒" + totalMoves + "步过第" + currentLevel + "关,不服来战";
 				$("#success").attr("data-title", successContent);
 				
 				//var timestamp1 = new Date().getTime();				

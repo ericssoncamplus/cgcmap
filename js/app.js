@@ -17,7 +17,7 @@ $(document).on("pagebeforechange", function(e, data) {
             break;
         case "next" :
             if (currentLevel < level.length - 1) {
-                toPage = "next";
+                toPage = "game";
                 g = new game.init(level[++currentLevel], finishedGame);
             } else {
                 toPage = "finished";
@@ -59,7 +59,9 @@ function renderLevelSelect(dif) {
 
 function finishedGame(totalMoves, time) {
 	
-	level = (currentLevel + 1);
+	//level = (currentLevel + 1);
+	
+	level = currentLevel;
 	
 	/*$("#currentLevel1").html(currentLevel);
     $("#score1").html(totalMoves);

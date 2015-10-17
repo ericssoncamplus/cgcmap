@@ -6,7 +6,7 @@ $(document).on("pagebeforechange", function(e, data) {
     $.mobile.showPageLoadingMsg();
     var page = data.toPage.toString().split("#");
     var toPagePrefix = page[0];
-    var toPage = page[1];
+    var toPage = page[1].toString().split("?")[0];
 	
 	//alert(toPagePrefix);
  
@@ -17,12 +17,14 @@ $(document).on("pagebeforechange", function(e, data) {
             toPage = "game";
             break;
         case "next" :
-            if (currentLevel < level.length - 1) {
+            var nextlevel = parseInt(getUrlVars()["nextLevel"]) || 0;
+            if (nextlevel < level.length - 1) {
                 toPage = "game";
-                g = new game.init(level[++currentLevel], finishedGame);
+                g = new game.init(level[nextlevel], finishedGame);
             } else {
                 toPage = "finished";
             }
+            currentLevel = nextlevel;
             break;
         case "pre":
             if (currentLevel > 0) {

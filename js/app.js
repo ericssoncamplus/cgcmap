@@ -2,6 +2,7 @@ $(document).on("pagebeforechange", function(e, data) {
     if (typeof data.toPage !== 'string') {
         return;
     }
+    currentLevel = parseInt(window.localStorage.getItem("level")) || 0; // from persistent
     $.mobile.showPageLoadingMsg();
     var page = data.toPage.toString().split("#");
     var toPagePrefix = page[0];
@@ -83,6 +84,6 @@ function finishedGame(totalMoves, time) {
 	/*$.mobile.changePage("success.html", {transition: "slideup"});*/
 	//window.location.href="test.html?currentLevel=5";
 	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves;
-	window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves + "&timestamp=" + timestamp;
+	window.location.href="success.html#success?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves + "&timestamp=" + timestamp;
 	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves + "&huangshouxi=huangshouxi";
 }

@@ -1,0 +1,33 @@
+#ericssonbg1 {
+	background-image:url(images/background2.jpg); 
+	background-size:100% 100%; 
+	background-repeat:no-repeat; 
+	background-color:#fff;
+}
+
+#ericsson_div1 {
+	color: #fff;
+	font-size: 24px;
+	text-align:center; 
+	width: 100%; 
+	display:block; 
+	padding:2px 0px; 
+	font-weight:normal; 
+	text-shadow:none;
+}	
+
+#ericsson_div2 {
+	color: #fff;
+	font-size: 16px;
+	/*text-align:center; */
+	width: 100%; 
+	display:block; 
+	padding:2px 0px; 
+	font-weight:normal; 
+	text-shadow:none;
+	margin-top:12px;
+}
+
+#ericsson_img {
+	margin-top: 12px;
+}

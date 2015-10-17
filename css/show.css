@@ -1,0 +1,26 @@
+#showbg1 {
+	background-image:url(images/background2.jpg); 
+	background-size:100% 100%; 
+	background-repeat:no-repeat; 
+	background-color:#fff;
+}
+
+#span1 {
+	color: #fff;
+	font-size: 22px; 
+	width: 100%; 
+	display:block; 
+	padding:8px 0px; 
+	font-weight:normal; 
+	text-shadow:none;
+}
+
+#span2 {
+	color: #fff;
+	font-size: 14px; 
+	width: 100%; 
+	display:block; 
+	padding:2px 0px; 
+	font-weight:normal; 
+	text-shadow:none;
+}

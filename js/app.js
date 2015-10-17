@@ -59,7 +59,7 @@ function renderLevelSelect(dif) {
 
 function finishedGame(totalMoves, time) {
 	
-	level = (currentLevel + 1);
+	//level = (currentLevel + 1);
 	
 	$("#currentLevel1").html(level);
     $("#score1").html(totalMoves);

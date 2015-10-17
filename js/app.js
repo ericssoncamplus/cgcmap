@@ -17,7 +17,7 @@ $(document).on("pagebeforechange", function(e, data) {
             break;
         case "next" :
             if (currentLevel < level.length - 1) {
-                toPage = "game";
+                toPage = "next";
                 g = new game.init(level[++currentLevel], finishedGame);
             } else {
                 toPage = "finished";

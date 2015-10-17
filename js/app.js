@@ -58,17 +58,28 @@ function renderLevelSelect(dif) {
 }
 
 function finishedGame(totalMoves, time) {
-	$("#currentLevel1").html(currentLevel + 1);
+	
+	level = (currentLevel + 1);
+	
+	$("#currentLevel1").html(level);
     $("#score1").html(totalMoves);
     $("#timeEl1").html(time);
 	
-	$("#currentLevel2").html(currentLevel + 1);
+	$("#currentLevel2").html(level);
     $("#score2").html(totalMoves);
     $("#timeEl2").html(time);
 	
-    $.mobile.changePage("#success", {transition: "slideup"});
+	
+	
+	//var successContent = time + "秒" + totalMoves + "步过第" + (currentLevel + 1) + "关,不服来战";
+	
+	//$("#success").attr("data-title", successContent);
+	
+    //$.mobile.changePage("#success?level="+currentLevel, {transition: "slideup"});
 	/*$.mobile.changePage("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/success.html", {transition: "slideup"});*/
 	/*$.mobile.changePage("success.html", {transition: "slideup"});*/
-	//window.location.href="success.html";
+	//window.location.href="test.html?currentLevel=5";
+	//window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves;
+	window.location.href="success.html?time=" + time + "&currentLevel=" + level + "&totalMoves=" + totalMoves;
 	
 }

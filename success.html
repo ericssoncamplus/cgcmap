@@ -64,27 +64,74 @@
 			}
 						
         </style>
-        <!--
+        
         <script type="text/javascript">
 			$(document).ready(function() {
-				var url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#success";
-				var success_url = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;				
-				if(url === success_url) {
+				//window.location.replace("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/index.html#home");
+				//var url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+				//var success_url = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;				
+				//alert(url);
+				//if(url === success_url) {
 					//window.location.replace("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/index.html#home");
-					window.location.replace("http://ericssoncamplus.github.io/cgcmap/index.html#home");
-				}				
+					//window.location.replace("http://ericssoncamplus.github.io/cgcmap/index.html#home");
+				//}				
             });
-        </script>
-		-->
+        </script>		
+		
+		<script type="text/javascript">
+			function getUrlVars()
+			{
+				var vars = [], hash;
+				var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+				for(var i = 0; i < hashes.length; i++)
+				{
+					hash = hashes[i].split('=');
+					vars.push(hash[0]);
+					vars[hash[0]] = hash[1];
+				}
+				return vars;
+			}
+			$(document).on("pagebeforechange", function(e, data) {	
+				//var d = new Date().getSeconds();		    
+				//$("#test").attr("data-title", d);
+				var time = getUrlVars()["time"];
+				var currentLevel = getUrlVars()["currentLevel"];	
+				var totalMoves = getUrlVars()["totalMoves"];					
+				$("#timeEl2").text(time);
+				$("#currentLevel2").text(currentLevel);		
+				$("#score2").text(totalMoves);
+				var successContent = time + "秒" + totalMoves + "步过第" + currentLevel + "关,不服来战";
+				$("#success").attr("data-title", successContent);
+				
+				if(currentLevel == 0) {
+					//window.location.replace("file://localhost/C:/Zhuang/WorkSpace/demoWorkSpace/cgcmap/index.html#home");
+					window.location.href="index.html#home";
+				}
+				/*else {
+					window.location.href="index.html#retry";
+				}*/
+				
+			});
+			function backretry() {
+				window.location.href="index.html#retry";
+			}
+			function backnext() {
+				window.location.href="index.html#next";
+			}
+			function backhome() {
+				window.location.href="index.html#home";
+			}
+		</script>
                        
     </head>
     <body style="text-align: center;">            
           
-        <div data-role="page" id="success">
-            <div data-theme="a" data-role="header">              
+        <div data-role="page" id="success" id="success">
+            <!--<div data-theme="a" data-role="header">              
                 <h3>
-                	第<span id="currentLevel1"></span>关,<span id="timeEl1"></span>秒<span id="score1"></span>步就过关了,你也来试试           </h3> 
-            </div>
+                	第<span id="currentLevel1"></span>关,<span id="timeEl1"></span>秒<span id="score1"></span>步就过关了,你也来试试 
+				</h3> 
+            </div>-->
             <div data-role="content">            	
                 <div>
                 	<span id="success_span1">恭喜你!!!</span>
@@ -93,9 +140,10 @@
                 </div>    
                 <br/>           
                 <div id="success_div">
-                    <a href="index.html#retry">重新开始这关</a>
-                    <a href="index.html#game">下一关</a>
-                    <a href="index.html">首页</a>
+                    <a onclick="backretry()">重新开始这关</a>
+                    <!--<a href="index.html#game">下一关</a>-->
+					<a onclick="backnext()" >下一关</a>
+                    <a onclick="backhome()">首页</a>
                     <a href="about.html" data-ajax="false">爱立信招聘</a>
                 </div>
             </div>

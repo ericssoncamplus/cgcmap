@@ -193,7 +193,7 @@
 			}
         </style>
         
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
 			$(document).ready(function() {
 				var url = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;				
 				var success_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#success";
@@ -206,13 +206,13 @@
 					window.location.replace("http://ericssoncamplus.github.io/cgcmap/index.html#game");
 				}*/
             });
-        </script>
+        </script>-->
                        
     </head>
     <body style="text-align: center;">
 		<title>ericsson</title>
         <!-- Home -->
-        <div data-role="page" id="home" data-title="Page Foo">       
+        <div data-role="page" id="home">       
         	<div data-role="header" data-theme="a">
             	<h3>点亮爱立信图标</h3>
             </div> 
@@ -224,7 +224,7 @@
                     <br/>
                     <img src="css/images/ericssonlogo-13.png" width="120px" height="120px" >
                     <br/>
-                    <div>点亮爱立信</div>                       
+                    <div>开始游戏</div>                       
                     </a>
                 </div>
             	<br/><br/>
@@ -261,16 +261,62 @@
                     <li class="ui-block-c"><a href="about.html" data-transition="fade" data-theme="a" data-icon="grid" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true" data-ajax="false"><span class="ui-btn-inner"><span class="ui-btn-text">爱立信招聘</span><span class="ui-icon ui-icon-grid ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
                 </ul>
             </div>
-        </div>
+        </div> 
+		
+		<!-- Game -->
+        <div data-role="page" id="retry">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    点亮爱立信图标
+                </h3>
+            </div>
+            <div data-role="content" id="grid">
+				
+            </div>            
+            <div data-role="controlgroup" data-type="horizontal" >
+                <a href="#" id="time" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-first-child ui-btn-up-c">计时 : </a>
+                <a href="#retry" data-role="button" data-icon="refresh" data-iconpos="notext">Up</a>
+            </div>
+            <div data-role="tabbar" data-iconpos="top" data-theme="a" data-cid="tabbar3" class="codiqa-control ui-footer ui-footer-fixed ui-bar-a ui-navbar ui-mini" role="navigation">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a"><a href="#pre" data-transition="fade" data-theme="a" data-icon="arrow-l" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">上一关</span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
+                    <li class="ui-block-b"><a href="#home" data-transition="fade" data-theme="a" data-icon="home" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">首页</span><span class="ui-icon ui-icon-home ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>                    
+                    <li class="ui-block-c"><a href="about.html" data-transition="fade" data-theme="a" data-icon="grid" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true" data-ajax="false"><span class="ui-btn-inner"><span class="ui-btn-text">爱立信招聘</span><span class="ui-icon ui-icon-grid ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
+                </ul>
+            </div>
+        </div> 
+		
+		<!--Next-->
+		<div data-role="page" id="next">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    点亮爱立信图标
+                </h3>
+            </div>
+            <div data-role="content" id="grid">
+				
+            </div>            
+            <div data-role="controlgroup" data-type="horizontal" >
+                <a href="#" id="time" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-first-child ui-btn-up-c">计时 : </a>
+                <a href="#retry" data-role="button" data-icon="refresh" data-iconpos="notext">Up</a>
+            </div>
+            <div data-role="tabbar" data-iconpos="top" data-theme="a" data-cid="tabbar3" class="codiqa-control ui-footer ui-footer-fixed ui-bar-a ui-navbar ui-mini" role="navigation">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a"><a href="#pre" data-transition="fade" data-theme="a" data-icon="arrow-l" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">上一关</span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
+                    <li class="ui-block-b"><a href="#home" data-transition="fade" data-theme="a" data-icon="home" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">首页</span><span class="ui-icon ui-icon-home ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>                    
+                    <li class="ui-block-c"><a href="about.html" data-transition="fade" data-theme="a" data-icon="grid" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true" data-ajax="false"><span class="ui-btn-inner"><span class="ui-btn-text">爱立信招聘</span><span class="ui-icon ui-icon-grid ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
+                </ul>
+            </div>
+        </div> 
         
         <!-- Success -->
-        <div data-role="page" id="success">
-            <div data-theme="a" data-role="header">					
+        <!--<div data-role="page" id="success">-->
+            <!--<div data-theme="a" data-role="header">					
                 <h3>
                 	<span id="timeEl1"></span>秒<span id="score1"></span>步过第<span id="currentLevel1"></span>关,不服来战
 				</h3> 
-            </div>
-            <div data-role="content">  
+            </div>-->
+            <!--<div data-role="content">  
 				<img src="css/images/e.jpg" width="0px" height="0px"/>
                 <div>
                 	<span id="success_span1">恭喜你!!!</span>
@@ -285,7 +331,7 @@
                     <a href="about.html" data-ajax="false">爱立信招聘</a>
                 </div>
             </div>
-        </div>
+        </div>-->
                     
         <!-- Finised -->
         <div data-role="page" id="finished">

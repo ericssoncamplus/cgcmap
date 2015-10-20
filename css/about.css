@@ -1,12 +1,11 @@
 #about {
-	/*background-image:url(images/background1.png); */
 	background-size:100% 100%; 
 	background-repeat:no-repeat; 
 	background-color:#fff;	
 }
 
 #about_div {
-	background-color: rgb(30, 55, 158) !important;
+	background-color: #1e37b4;
 	display: block;
 	top: 0px;
 	right: 0px;
